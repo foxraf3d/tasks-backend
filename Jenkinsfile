@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Bild Backend'){
             steps{
-                sh 'mvn clean package -/DskipTests=true'
+                sh 'mvn clean package -DskipTests=true'
             }
         }
     }
