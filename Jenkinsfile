@@ -34,5 +34,13 @@ pipeline{
                 }                
             }
         }
+         stage('Functional Tests'){
+            steps{
+                dir('functional-test'){
+                    git credentialsId: 'github_login', url: 'https://github.com/foxraf3d/tasks-functional-test'
+                    sh 'mvn test'
+                }
+            }
+         }
     }
 }
