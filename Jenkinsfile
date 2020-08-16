@@ -46,6 +46,7 @@ pipeline{
     post {
         always {
            junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml, api-test/target/surefire-reports/*.xml, functional-test/target/surefire-reports/*.xml' 
+            emailext attachLog: true, body: 'Build finished!', subject: 'Build has finished', to: 'rafael_sistema27@hotmail.com'
         }
         unsuccessful{
         	emailext attachLog: true, body: 'Verifique o log em anexo', subject: 'Build has failed', to: 'rafael_sistema27@@hotmail.com'
