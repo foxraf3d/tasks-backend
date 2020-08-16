@@ -48,10 +48,10 @@ pipeline{
            junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml, api-test/target/surefire-reports/*.xml, functional-test/target/surefire-reports/*.xml' 
         }
         unsuccessful{
-        	emailext attachLog: true, body: 'Verifique o log em anexo', subject: 'Build has failed', to: 'foxraf3d@gmail.com'
+        	emailext attachLog: true, body: 'Verifique o log em anexo', subject: 'Build has failed', to: 'rafael_sistema27@@hotmail.com'
         }
         fixed{
-        	emailext attachLog: true, body: 'Build corrigido!', subject: 'Build has failed', to: 'foxraf3d@gmail.com'
+        	emailext attachLog: true, body: 'Build corrigido!', subject: 'Build has failed', to: 'rafael_sistema27@hotmail.com'
         }
     }
 }
